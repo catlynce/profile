@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Oswald:500,700&display=swap');
-/***
-font-family: 'Open Sans', sans-serif;
-font-family: 'Oswald', sans-serif;
-**/
+
 body {
     min-height: 100%;
     font-family: 'Open Sans', sans-serif;
@@ -47,6 +44,31 @@ img {
     border-radius: 50%;
 }
 
+.profile-img {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(https://avatars3.githubusercontent.com/u/6062926?s=460&v=4);
+    background-color: transparent;
+}
+
+/* .glow {
+    position: relative;
+} */
+
+.profile-img:hover .glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: red;
+}
+.glow:hover {
+}
+
 .text-justify {
     text-align: justify;
 }
@@ -57,6 +79,24 @@ img {
 
 .pb-6 {
     padding-bottom: 48px !important;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col-3 {
+    width: 30%;
+}
+
+.col-7 {
+    width: 70%;
 }
 
 .container {
@@ -99,6 +139,62 @@ img {
 }
 .social-icon:hover i {
     color: rgba(30,30,30,.9);
+}
+
+.progressbar {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 2px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.4);
+}
+.progressbar:after {
+    content: '';
+    width: 80%;
+}
+.progressbar:after {
+    content: '';
+}
+.progressbar[data-width="10"]:after {
+    width: 10%;
+    background-color: rgba(255,0,0,.5)
+}
+.progressbar[data-width="20"]:after {
+    width: 20%;
+    background-color: rgba(255,0,0,.5)
+}
+.progressbar[data-width="30"]:after {
+    width: 30%;
+    background-color: rgba(255,0,0,.5)
+}
+.progressbar[data-width="40"]:after {
+    width: 40%;
+    background-color: rgba(255,0,0,.5)
+}
+.progressbar[data-width="50"]:after {
+    width: 50%;
+    background-color: #eb8242;
+}
+.progressbar[data-width="60"]:after {
+    width: 60%;
+    background-color: #eb8242;
+}
+.progressbar[data-width="70"]:after {
+    width: 70%;
+    background-color: #f6da63;
+}
+.progressbar[data-width="80"]:after {
+    width: 80%;
+    background-color: #f6da63;
+}
+.progressbar[data-width="90"]:after {
+    width: 90%;
+    background-color: #91bd3a;
+}
+.progressbar[data-width="100"]:after {
+    width: 100%;
+    background-color: #91bd3a;
 }
 
 @media (max-width: 768px) {
